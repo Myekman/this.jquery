@@ -29,7 +29,11 @@ $(document).ready(function () {
             $("#evTarget").html("<p>hower effect shut up</p>");
             $("#evTarget").removeClass("highlighted");
 
-        });
+        })
+            $("#textEntry").on("keypress", function (evt) {
+
+                $("#keyPress").text(String.fromCharCode(evt.charCode));
+            });
     });
 
     function highlight(evt) {
