@@ -17,3 +17,13 @@
     padding: 20px;
     background-color: #000;
 }
+
+.one_box {
+    height: 300px;
+    width: 300px;
+    background-color: red;
+}
+
+.hightlighted {
+    background-color: aquamarine;
+}

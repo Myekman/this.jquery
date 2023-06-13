@@ -21,3 +21,18 @@ $(document).ready(function () {
     });
 })
 
+
+    $(function() {
+        $("#evTarget").on("mouseover mouseleave", highlight);
+        $("#evTarget").on("click", function(evt) {
+            $("#evTarget").off("mouseover mouseleave", highlight);
+            $("#evTarget").html("<p>hower effect shut up</p>");
+            $("#evTarget").removeClass("highlighted");
+
+        });
+    });
+
+    function highlight(evt) {
+        $("#evTarget").toggleClass("hightlighted");
+    }
+
