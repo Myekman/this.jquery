@@ -1,13 +1,16 @@
 $("document").ready(function() {
 
-    // the #content id is the heading "first jquery page" and after it loaded append paragraf.
+    // --------------------------the #content id is the heading "first jquery page" and after it loaded append paragraf.
+    // ----------------------------- more code to add red border to class heading or the first paragraf
     $("#content").append("<p>The page just loaded</p>");
             //$("p").css("border", "3px solid red");
             // $(".selectors").css("border", "3px solid red");
             // $("#intro").css("border", "3px solid red");
            $("p:first").css("border", "3px solid red");
-        //    $("h2:not(.selectors)").css("border", "3px solid red");
+           $("h2:not(.selectors)").css("border", "3px solid red");
 
+
+        //    ----------------------------------------------------- svarta boxarna ändrar färg till röd här
     $(".box").on("click", function () {
         /**
          * When we click on an element that has
@@ -28,9 +31,8 @@ $("document").ready(function() {
             $("." + className).css("background-color", "red");
         }
     });
-})
 
-
+    // ----------------------------------------------------- röda/ turquosa boxen här
     $(function() {
         $("#evTarget").on("mouseover mouseleave", highlight);
         $("#evTarget").on("click", function(change_color) {
@@ -50,13 +52,26 @@ $("document").ready(function() {
     }
 
 
-    // the grey dbox function here
-    $(function() {
-        var newP = $("<p>");
-        newP.append("<em>Hello there</em>");
-        $("#example").html(newP);
-});
-    
+// ------------------------------------------------------------the grey box function here
+$(function() {
+    // koden nedan ersätter allt annat som finns i diven från html
+               // var newP = $("<p>");
+               // newP.append("<em>Hello there</em>");
+               // $("#example").html(newP);
+       
+       
+   //  koden nedan sätter watch this framför heading med id #creation
+            //    $("#creation").prepend("Watch This! ");
+   
+   //  change the existing content
+                  $("#example").html("<h2>This is a new H2</h2>");
+                  
+       });
+
+
+
+})
+
 
 
 
