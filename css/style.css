@@ -27,3 +27,9 @@
 .hightlighted {
     background-color: aquamarine;
 }
+
+#example {
+    width: 900px;
+    height: 200px;
+    background-color: grey;
+}

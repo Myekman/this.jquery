@@ -1,4 +1,13 @@
-$(document).ready(function () {
+$("document").ready(function() {
+
+    // the #content id is the heading "first jquery page" and after it loaded append paragraf.
+    $("#content").append("<p>The page just loaded</p>");
+            //$("p").css("border", "3px solid red");
+            // $(".selectors").css("border", "3px solid red");
+            // $("#intro").css("border", "3px solid red");
+           $("p:first").css("border", "3px solid red");
+        //    $("h2:not(.selectors)").css("border", "3px solid red");
+
     $(".box").on("click", function () {
         /**
          * When we click on an element that has
@@ -24,19 +33,32 @@ $(document).ready(function () {
 
     $(function() {
         $("#evTarget").on("mouseover mouseleave", highlight);
-        $("#evTarget").on("click", function(evt) {
+        $("#evTarget").on("click", function(change_color) {
             $("#evTarget").off("mouseover mouseleave", highlight);
             $("#evTarget").html("<p>hower effect shut up</p>");
             $("#evTarget").removeClass("highlighted");
 
         })
-            $("#textEntry").on("keypress", function (evt) {
+            $("#textEntry").on("keypress", function (last_letter) {
 
-                $("#keyPress").text(String.fromCharCode(evt.charCode));
+                $("#keyPress").text(String.fromCharCode(last_letter.charCode));
             });
     });
 
-    function highlight(evt) {
+    function highlight(change_color) {
         $("#evTarget").toggleClass("hightlighted");
     }
+
+
+    // the grey dbox function here
+    $(function() {
+        var newP = $("<p>");
+        newP.append("<em>Hello there</em>");
+        $("#example").html(newP);
+});
+    
+
+
+
+    
 
